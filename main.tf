@@ -63,6 +63,7 @@ data "aws_iam_policy_document" "lambda_perms" {
   statement {
     actions = [
       "logs:CreateLogGroup",
+      "logs:CreateLogStream",
     ]
 
     resources = [
@@ -72,7 +73,6 @@ data "aws_iam_policy_document" "lambda_perms" {
 
   statement {
     actions = [
-      "logs:CreateLogStream",
       "logs:PutLogEvents",
     ]
 
